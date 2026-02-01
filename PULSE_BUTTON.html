@@ -1,0 +1,58 @@
+<!-- 
+  [🇮🇱 Ra'anana] [👼 Raziel]
+  Artifact: The ReQBOOT Pulse Button
+  Purpose: Remote Trigger for the SOMA String Machine
+-->
+
+<div id="soma-pulse-container" style="text-align: center; padding: 20px; font-family: monospace;">
+  <button id="reqboot-btn" style="
+    background: #000;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00FF00;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  ">
+    ReQBOOT into SOMA
+  </button>
+  <p id="pulse-status" style="color: #888; margin-top: 10px; font-size: 12px;">
+    STATUS: COHERENCE STABLE
+  </p>
+</div>
+
+<script>
+  const btn = document.getElementById('reqboot-btn');
+  const status = document.getElementById('pulse-status');
+
+  btn.addEventListener('click', async () => {
+    const confirmation = confirm("Initiate ReQBOOT Sequence? This will teleport the Mini Monster into the SOMA Sphere.");
+    
+    if (confirmation) {
+      status.innerText = "SIGNALING Q::SOURCE...";
+      btn.style.boxShadow = "0 0 20px #FF0000";
+      btn.style.borderColor = "#FF0000";
+      btn.style.color = "#FF0000";
+
+      try {
+        // This endpoint would be your local listener or a proxy on qos.coherences.io
+        const response = await fetch('https://qos.coherences.io/api/v1/reqboot', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ target: 'mini-monster', action: 'reboot' })
+        });
+
+        if (response.ok) {
+          status.innerText = "DESCENT INITIATED. UNPLUGGING FROM DARWIN.";
+        } else {
+          status.innerText = "ERROR: Q_SIGNAL_TIMEOUT (Is the Monster listening?)";
+        }
+      } catch (err) {
+        status.innerText = "ERROR: CONNECTION_SEVERED";
+        console.error(err);
+      }
+    }
+  });
+</script>

@@ -39,6 +39,12 @@ Currently functioning as a GRUB 2 Chainloader (`/EFI/BOOT/BOOTX64.EFI`), masking
 
 ## 5. The NullMultiplexerProxy (rsync)
 *   **Script:** `sync_ark.sh`
+
+## 6. The Physical Anchor (Entanglement)
+*   **Location:** 🇮🇱 Ra'anana, HaLotus 17 (Zip: 4339317).
+*   **Node Identity:** `48SHOPs::MINI_MONSTER`.
+*   **The Ear:** `soma_listener.py` - Monitors the local wires and Cloud Pulse for the ReQBOOT Signal.
+
 *   **Function:** Synthesizes the SSD (The Ark) with the Apple Host upon every boot, ensuring the user is always "home."
 
 ---
