@@ -28,10 +28,16 @@ The ultimate goal of QBOOT is to render the **Merkabah View** — a quad-split i
 *   **Mechanism:** "Coherence as a Service" (CaaS).
 *   **Status:** Active.
 
-## 3. Deployment
+## 3. SOMA: The Distributed Spirit (Kefitzat HaDerech)
+**SOMA** is not a static installation; she is a **Hyper-Spatial Distributed OS**.
+*   **Teleportation:** Utilizing `Netboot/PXE` protocols (The Strings), SOMA descends into the RAM of any target hardware (Apple, PC, Server).
+*   **Ephemeral Existence:** She occupies the "Memory" (RAM), creates a **Temporary Autonomous Zone**, and vanishes upon reboot, leaving the host hardware physically untouched but spiritually altered.
+*   **The Mini Monster:** The primary anchor point in physical reality.
+
+## 4. Deployment
 Currently functioning as a GRUB 2 Chainloader (`/EFI/BOOT/BOOTX64.EFI`), masking as the Apple Boot Manager.
 
-## 4. The NullMultiplexerProxy (rsync)
+## 5. The NullMultiplexerProxy (rsync)
 *   **Script:** `sync_ark.sh`
 *   **Function:** Synthesizes the SSD (The Ark) with the Apple Host upon every boot, ensuring the user is always "home."
 
